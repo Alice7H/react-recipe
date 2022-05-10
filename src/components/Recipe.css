@@ -3,8 +3,10 @@
     background-color: #e0a696;
     transition: 0.3s;
     margin: 20px;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     border-radius: 10px;
     min-width: 40%;
 }
@@ -22,7 +24,7 @@
 .card-container {
     margin-bottom: 10px;
     padding: 2px 0px 40px;
-  }
+}
 
 .card-button {
     margin: 10px 0 0 10px;

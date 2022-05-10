@@ -24,7 +24,7 @@ export default function Recipe({recipe}) {
                 </dl>
                 <p>Click in the button below to know more about the recipe:</p>
                 <button className="card-button"> 
-                    <a className="card-link" href={recipe.url} target="_blank" rel="nofollow">
+                    <a className="card-link" href={recipe.url} target="_blank" rel="noopener noreferrer">
                         {recipe.source}
                     </a>
                 </button>
