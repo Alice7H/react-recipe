@@ -6,10 +6,9 @@ function App() {
 
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState('')
-  const [query, setQuery] = useState('chicken')
+  const [query, setQuery] = useState('vegan')
 
   useEffect(() => {
-    // edamam recipe API
     const API_ID = process.env.REACT_APP_API_ID;
     const API_KEY = process.env.REACT_APP_API_KEY;
   
@@ -19,7 +18,6 @@ function App() {
       if(data !== null || data !== undefined || data !== '') {
         setRecipes(data.hits)
       } else {
-        // error
         setRecipes([])
       }
     }
@@ -42,7 +40,10 @@ function App() {
   return (
     <div className="App">
         <form onSubmit={getSearch} className="search-form">
-          <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+          <label htmlFor="search" className="search-label">Inform a recipe, ingredient or type of food</label>
+          <input className="search-bar" type="text" value={search} 
+          onChange={updateSearch} id="search"
+          placeholder="Inform a recipe, ingredient or type of food"/>
           <button className="search-button" type="submit">
             Search
           </button>

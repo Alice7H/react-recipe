@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.search-label{
+  display: none;
+}
+
 .search-bar {
   width: 50%;
   border: none;
